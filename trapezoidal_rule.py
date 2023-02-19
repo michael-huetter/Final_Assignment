@@ -124,7 +124,7 @@ plt.title("Convergence Study for Trapezoidal Rule")
 plt.legend()
 plt.show()
 
-#part c)
+#part d)
 x = 1; tol = 0.000000001
 res, n, k, convergance = estimate_f(x, tol)
 if convergance == True:
