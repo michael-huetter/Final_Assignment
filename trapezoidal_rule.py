@@ -54,6 +54,24 @@ def taylor_series_approximation(t, x):
 
 
 def richardson_rule(f, a, b, x, tol, k_max):
+    """
+    Error estimation using Richardson extrapolation for a second-order convergence scheme such
+    as the trapezoidal rule.
+    
+    Arguments:
+    f -- the integrand (function)
+    a -- the lower limit of integration
+    b -- the upper limit of integration
+    x -- constant variable
+    tol -- error tolerance
+    k_max -- max number of iterations
+    
+    Returns:
+    trap -- value of f(x)
+    n -- n that gives f(x) within the given error tolerance tol
+    k -- the number of iterations
+    booleans - True/Fales whether the given tolerance was archived or not
+    """
     n = 10
     error = np.inf
     k = 0
