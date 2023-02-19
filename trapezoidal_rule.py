@@ -60,8 +60,6 @@ def richardson_rule(f, a, b, x, tol, k_max):
     while error > tol and k < k_max:
         n *= 2
         trap = trapezoidal_rule(f, a, b, x, n)
-        #rich = 0.5 * (trap + trapezoidal_rule(f, a, b, x, n//2))
-        #error = np.abs(rich - trap) / (2**2 - 1)
         rich_h = (4/3)*(trapezoidal_rule(f, a, b, x, n//2)-trap)
         rich_h_2 = (4/3)*(trapezoidal_rule(f, a, b, x, n//4)-trapezoidal_rule(f, a, b, x, n//2))
         error = np.abs(rich_h-rich_h_2) / (2**2 -1)
